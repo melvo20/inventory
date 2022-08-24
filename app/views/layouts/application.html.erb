@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>V&M /Inventory</title>
+    <title>V&M Inventory</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +10,20 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <% if flash[:notice]%>
+      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <%= flash[:notice]%>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
+    <% if flash[:alerts]%>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= flash[:alerts]%>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

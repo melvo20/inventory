@@ -1,8 +1,6 @@
-<div class="container-fluid">
-  <h1>Main#home</h1>
-  <% @volunteers.each do |volunteer|%>
-    <%= volunteer.id%>
-    <%= volunteer.name%>
-    <hr>
-  <% end %>
-</div>
+<h1>Home</h1>
+<% @volunteers.each do |volunteer|%>
+  <%= volunteer.id%>
+  <%= volunteer.name%>
+  <hr>
+<% end %>
