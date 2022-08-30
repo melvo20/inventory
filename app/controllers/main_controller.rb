@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def home
     @categories = Category.all
-    @volunteers = Volunteer.all
+   
   end
 
   def about

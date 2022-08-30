@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :products
+  resources :volunteers
   devise_for :users
   root 'main#home'
   get '/home', to: 'main#home'
